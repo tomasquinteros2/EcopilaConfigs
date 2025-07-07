@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  data:
+    redis:
+      host: ${REDIS_HOST:redis-online}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service-online:8761/eureka/
