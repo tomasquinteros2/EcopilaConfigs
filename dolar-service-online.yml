@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:postgres-db}:${DB_PORT:5432}/${DB_NAME:ecopila_db_online}
+    username: ${DB_USER:admin}
+    password: ${DB_PASS:password}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: ${REDIS_HOST:redis-online}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service-online:8761/eureka/
