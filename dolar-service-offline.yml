@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:/data/dolar-db;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: redis
+
+eureka:
+  client:
+    enabled: false
+
+app:
+  offline-mode: true
+  dolar:
+    default-price: 1200.0
+  sincronizacion:
+    url-nube: "http://192.168.0.14:9082"
+    intervalo: 60000
