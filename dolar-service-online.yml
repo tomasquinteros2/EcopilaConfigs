@@ -11,7 +11,14 @@ spring:
   data:
     redis:
       host: ${REDIS_HOST:redis-online}
-
+  cloud:
+    config:
+      fail-fast: true # Le dice a la app que falle si no puede conectar al arrancar
+      retry:
+        initial-interval: 2000 # Espera 2 segundos antes del primer reintento
+        max-interval: 10000   # Tiempo máximo de espera entre reintentos (10s)
+        multiplier: 1.5       # Multiplica el intervalo en cada reintento
+        max-attempts: 10 
 eureka:
   client:
     serviceUrl:
