@@ -8,11 +8,9 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
-
 eureka:
   client:
     enabled: false
-
 app:
   offline-mode: true
   sincronizacion:
