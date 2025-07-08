@@ -11,11 +11,9 @@ spring:
   data:
     redis:
       host: redis
-
 eureka:
   client:
     enabled: false
-
 app:
   offline-mode: true
   dolar:
