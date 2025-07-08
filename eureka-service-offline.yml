@@ -8,7 +8,6 @@ spring:
   data:
     redis:
       host: ${REDIS_HOST:redis-online}
-
 eureka:
   client:
     serviceUrl:
